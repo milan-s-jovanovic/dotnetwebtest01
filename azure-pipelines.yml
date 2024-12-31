@@ -18,8 +18,12 @@ steps:
 - task: NuGetToolInstaller@1
 
 - task: NuGetCommand@2
+  displayName: 'NuGet Restore'
   inputs:
+    command: 'restore'
     restoreSolution: '$(solution)'
+    feedsToUse: 'config'
+    nugetConfigPath: './dotnetwebtest01.web/packages.config'
 
 - task: VSBuild@1
   inputs:
