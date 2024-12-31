@@ -23,7 +23,7 @@ steps:
     command: 'restore'
     restoreSolution: '$(solution)'
     feedsToUse: 'config'
-    nugetConfigPath: './packages.config'
+    nugetConfigPath: './dotnetwebtest01.web/packages.config'
 
 - task: VSBuild@1
   inputs:
